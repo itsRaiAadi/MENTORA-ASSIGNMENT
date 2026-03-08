@@ -1,0 +1,350 @@
+{
+  "info": {
+    "_postman_id": "8a93035d-69d3-4071-ab11-d96b81801237",
+    "name": "Mentora Backend API",
+    "description": "API collection for Mentora Backend Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47479966"
+  },
+  "item": [
+    {
+      "name": "Auth - Signup Parent",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"name\":\"Aditya Rai\",\n\"email\":\"parent@test.com\",\n\"password\":\"123456\",\n\"role\":\"parent\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/auth/signup",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Signup Mentor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"name\":\"John Mentor\",\n\"email\":\"mentor@test.com\",\n\"password\":\"123456\",\n\"role\":\"mentor\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/auth/signup",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "auth",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"email\":\"parent@test.com\",\n\"password\":\"123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/auth/login",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Auth - Get Current User",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/auth/me",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "auth",
+            "me"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"name\":\"Rahul\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/students",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Students",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/students",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Lesson",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"title\":\"Math Basics\",\n\"description\":\"Introduction to Algebra\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/lessons",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "lessons"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"studentId\":\"STUDENT_ID\",\n\"lessonId\":\"LESSON_ID\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/bookings",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Session",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"lessonId\":\"LESSON_ID\",\n\"date\":\"2026-03-10\",\n\"topic\":\"Algebra Basics\",\n\"summary\":\"Introduction to variables\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/sessions",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "sessions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Lesson Sessions",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/sessions/lesson/LESSON_ID",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "sessions",
+            "lesson",
+            "LESSON_ID"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LLM Summarize",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer TOKEN"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"text\":\"Artificial intelligence is transforming industries by automating tasks, improving decision making, and enabling new innovations across healthcare, finance, and education.\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://mentora-assignment.onrender.com/llm/summarize",
+          "protocol": "https",
+          "host": [
+            "mentora-assignment",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "llm",
+            "summarize"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
